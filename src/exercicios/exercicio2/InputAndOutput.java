@@ -1,5 +1,5 @@
 package exercicios.exercicio2;
-
+import java.util.Scanner;
 /**
  * 
  * Implementar os metodos abaixo como orientado de forma a completar o objetivo dessa tarefa.
@@ -11,11 +11,24 @@ package exercicios.exercicio2;
  *
  */
 public class InputAndOutput {
-
+	
 	/**
 	 * Quando finalizar a implementação dos metodos, execute esse metodo para testar a implementação
 	 */
 	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		String  nome;
+		
+		System.out.println(" Informe seu Nome ");
+		
+		nome = scanner.next();
+		
+		System.out.println("Olá " + nome + " sejá bem vindo ao nosso sistema");
+		
+		scanner.close();
+		
 		//Exibir no console a seguinte mensagem "Informe seu nome"
 		//Utilizar a classe Scanner para ler o que o usuário digitar no console
 		//Exibir no console a seguinte mensagem "Olá XX, sejá bem vindo ao nosso sistema"

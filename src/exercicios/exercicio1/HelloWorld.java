@@ -17,6 +17,9 @@ public class HelloWorld {
 	 */
 	public static void main(String[] args) {
 		//Em uma linha utilizar a classe System do Java para printar o texto "Hello World"
+		 
+				 System.out.println("Hello World");
+
 	}
 	
 }

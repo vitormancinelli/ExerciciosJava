@@ -1,5 +1,7 @@
 package exercicios.exercicio3;
 
+import java.util.Scanner;
+
 /**
  * 
  * Implementar os metodos abaixo como orientado de forma a completar o objetivo dessa tarefa.
@@ -20,6 +22,40 @@ public class BasicCalculator {
 	 * Quando finalizar a implementação dos metodos, execute esse metodo para testar a implementação
 	 */
 	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int op;
+		int numero1; 
+		int numero2;
+		
+		
+		System.out.println("Bem vindo a calculadora ");
+		System.out.println("1. Soma");
+		System.out.println("2. Subtrair");
+		System.out.println("3. Multiplicar");
+		System.out.println("4. Dividir");
+		System.out.println(" selecione a opcao ");
+		op = scanner.nextInt();
+		
+		System.out.println(" Digite o primeiro numero ");
+		numero1 = scanner.nextInt();
+		System.out.println(" Digite o segundo numero ");
+		numero2 = scanner.nextInt();
+		
+		
+		if (op == 1) {
+			System.out.println("O Valor é de: " + somar(numero1, numero2));
+        } else if(op == 2) {
+        	System.out.println("O Valor é de: " + subtrair(numero1, numero2));
+        } else if(op == 3) {
+        	System.out.println("O Valor é de: " + dividir(numero1, numero2));
+        } else if (op ==4) {
+    		System.out.println("O Valor é de: " + multiplicar(numero1, numero2));
+       scanner.close();
+        } 
+   }
+	
 		//Exibir no console a o menu com as opções de operações
 		
 		//Utilizar a classe Scanner para ler o que o usuário digitar no console, opção desejada
@@ -35,21 +71,23 @@ public class BasicCalculator {
 		//--- Metodos tem um nome, utilizado para invocar/chamar esse metodo, sempre exibidos antes do parenteses.
 		//--- Metodos sempre tem um retorno, caso não retorne nenhum valor, irá ter a palavra "void", o valor de retorno vem sempre antes nome do metodo
 		//OBS: Para chamar um método, basta utilizar o nome do metodo, seguido por parenteses com os valores de entrada, exemplo "somar(numero1, numero2)"
-	}
+	
 	
 	private static int somar(int numero1, int numero2) {
-		return 0; //Alterar aqui, para retornar a soma
+		return numero1 + numero2; //Alterar aqui, para retornar a soma
 	}
 	
 	private static int subtrair(int numero1, int numero2) {
-		return 0; //Alterar aqui, para retornar a subtração
+		return numero1 - numero2; //Alterar aqui, para retornar a subtração
 	}
 	
 	private static int dividir(int numero1, int numero2) {
-		return 0; //Alterar aqui, para retornar a divisão
+		return numero1 / numero2; //Alterar aqui, para retornar a divisão
 	}
 	
 	private static int multiplicar(int numero1, int numero2) {
-		return 0; //Alterar aqui, para retornar a multiplicação
+		return numero1 * numero2; //Alterar aqui, para retornar a multiplicação
+		
 	}
+
 }
