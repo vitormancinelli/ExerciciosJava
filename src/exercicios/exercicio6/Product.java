@@ -8,6 +8,7 @@ package exercicios.exercicio6;
  * @author vitor
  *
  */
+
 public class Product {
 
 	//Variável utilizada para armazenar o valor do código do produto
@@ -15,13 +16,15 @@ public class Product {
 	//Exemplo: Product produto = new Product();
 	//produto.codigo = 1;
 	//System.out.println("Codigo do produto = " + produto.codigo)
-	public Integer codigo;
+	
+	public int codigo;
 	
 	//Variável utilizada para armazenar o valor do nome do produto
 	//Deve ser publica para poder ser acessada de fora dessa classe, utilizando a seguinte forma: nome da variavel + .nome
 	//Exemplo: Product produto = new Product();
 	//produto.nome = "banana";
 	//System.out.println("Nome do produto = " + produto.nome)
+	
 	public String nome;
 	
 	//Variável utilizada para armazenar o valor do valor do produto
@@ -29,16 +32,19 @@ public class Product {
 	//Exemplo: Product produto = new Product();
 	//produto.valor = 10;
 	//System.out.println("Valor do produto = " + produto.valor)
-	public Integer valor;
+	
+	public int valor;
 	
 	//Variável utilizada para armazenar o valor do código do produto
 	//Deve ser publica para poder ser acessada de fora dessa classe, utilizando a seguinte forma: nome da variavel + .tipo
 	//Exemplo: Product produto = new Product();
 	//produto.tipo = "fruta";
 	//System.out.println("Codigo do produto = " + produto.tipo)
+	
 	public String tipo;
 	
 	//Método construtor padrão, onde não é recebido nenhum valor, porém por padrões de código não colocamos nenhum valor nas váriaveis, retornado todos as váriaveis do Objeto sem valor
+	
 	public Product() {
 		
 	}
@@ -56,4 +62,8 @@ public class Product {
 		this.tipo = tipo;
 	}
 	
+	@Override
+	public String toString() {
+		return "Produto {codigo: " + codigo + ", nome: " + nome + ", valor: " + valor + ", tipo: " + tipo + "}";
+	}
 }

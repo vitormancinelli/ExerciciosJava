@@ -1,5 +1,5 @@
 package exercicios.exercicio6;
-
+import java.util.Scanner;
 /**
  * 
  * Implementar os metodos abaixo como orientado de forma a completar o objetivo dessa tarefa.
@@ -16,7 +16,32 @@ public class ProductRegister {
 	/**
 	 * Quando finalizar a implementação dos metodos, execute esse metodo para testar a implementação
 	 */
+	
+	
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Bem vindo oa registrador de Produto");
+		System.out.println("Valores registrados serão :");
+		System.out.println("codigo, nome , valor e tipo");
+		
+		System.out.println("Digite o Codigo");
+		int codigo = scanner.nextInt();
+		
+		System.out.println("Digite o Nome");
+		String nome = scanner.next();
+		
+		System.out.println("Digite o Valor");
+		int valor = scanner.nextInt();
+		
+		System.out.println("Digite o Tipo");
+		String tipo = scanner.next();
+		
+		Product primeiroProduto = new Product(codigo, nome, valor, tipo);
+		
+		scanner.close();
+		
+		System.out.println("Produto Criado: " + primeiroProduto);
+		
 		//Utilizar a classe Scanner para ler os valores que o usuário digitar no console
 		//Os valores inseridos pelo usuário serão utilizados para criar o Produto
 		//Os valores necessários serão:
