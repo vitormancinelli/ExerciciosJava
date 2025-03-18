@@ -1,4 +1,4 @@
-package exercicios.exercicio6;
+package exercicios.exercicios8;
 
 /**
  * Essa classe tem como objetivo armazenar as informações do Produto
