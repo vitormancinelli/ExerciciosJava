@@ -16,6 +16,7 @@ public class HelloWorld {
 	 * Quando finalizar a implementação dos metodos, execute esse metodo para testar a implementação
 	 */
 	public static void main(String[] args) {
+		System.out.println("Hello World");
 		//Em uma linha utilizar a classe System do Java para printar o texto "Hello World"
 	}
 	
