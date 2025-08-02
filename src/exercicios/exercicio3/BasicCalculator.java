@@ -1,5 +1,6 @@
 package exercicios.exercicio3;
 
+import java.util.Scanner;
 /**
  * 
  * Implementar os metodos abaixo como orientado de forma a completar o objetivo dessa tarefa.
@@ -20,6 +21,48 @@ public class BasicCalculator {
 	 * Quando finalizar a implementação dos metodos, execute esse metodo para testar a implementação
 	 */
 	public static void main(String[] args) {
+		Scanner leitor = new Scanner(System.in);
+		
+		while (true) {
+			mostrarMenu();
+			int userOption = 0;
+			
+			while(userOption > 6 || userOption < 1) {
+				System.out.println("Sua escolha: ");
+				userOption = leitor.nextInt();
+			}
+			
+			int var1;
+			int var2;
+			
+			if (userOption > 0 && userOption < 5) {
+				System.out.println("Qual o primeiro número? ");
+				var1 = leitor.nextInt();
+				System.out.println("Qual o segundo número? ");
+				var2 = leitor.nextInt();
+
+				switch (userOption) {
+				case(1):
+					somar(var1, var2);
+					break;
+				case(2):
+					subtrair(var1, var2);
+					break;
+				case(3):
+					dividir(var1, var2);
+					break;
+				case(4):
+					multiplicar(var1, var2);
+					break;
+				}
+			} 
+			else if (userOption == 5){
+				System.out.println("Obrigado por usar nossa calculadora.");
+				System.exit(0);
+			}
+		leitor.close();
+		}
+		//switch(option);
 		//Exibir no console a o menu com as opções de operações
 		
 		//Utilizar a classe Scanner para ler o que o usuário digitar no console, opção desejada
@@ -37,19 +80,40 @@ public class BasicCalculator {
 		//OBS: Para chamar um método, basta utilizar o nome do metodo, seguido por parenteses com os valores de entrada, exemplo "somar(numero1, numero2)"
 	}
 	
+	private static void mostrarMenu() {
+		System.out.println("Menu: ");
+		System.out.println("1. Somar");
+		System.out.println("2. Subtração");
+		System.out.println("3. Divisão");
+		System.out.println("4. Multiplicação");
+		System.out.println("5. Sair");
+	}
+	
 	private static int somar(int numero1, int numero2) {
+		int result;
+		result = numero1 + numero2;
+		System.out.println(result);
 		return 0; //Alterar aqui, para retornar a soma
 	}
 	
 	private static int subtrair(int numero1, int numero2) {
+		int result;
+		result = numero1 - numero2;
+		System.out.println(result);
 		return 0; //Alterar aqui, para retornar a subtração
 	}
 	
 	private static int dividir(int numero1, int numero2) {
+		int result;
+		result = numero1 / numero2;
+		System.out.println(result);
 		return 0; //Alterar aqui, para retornar a divisão
 	}
 	
 	private static int multiplicar(int numero1, int numero2) {
+		int result;
+		result = numero1 * numero2;
+		System.out.println(result);
 		return 0; //Alterar aqui, para retornar a multiplicação
 	}
 }
