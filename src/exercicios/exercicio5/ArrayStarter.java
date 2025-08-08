@@ -83,7 +83,7 @@ public class ArrayStarter {
 	private static int searchTextOnArray(String[] array, String target) {
 		for(int i = 0; i < array.length; i++) {
 			//System.out.println("for funcionando");
-			if (array[i] == target) { //array[i].equals(target)
+			if (array[i].equals(target)) { //array[i].equals(target)
 				System.out.println("Target Found.");
 				System.out.println("Position: " + (i+1));
 				return 0;
