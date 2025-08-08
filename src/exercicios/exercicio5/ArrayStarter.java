@@ -96,8 +96,13 @@ public class ArrayStarter {
 	//método para remover String
 	private static String[] removeTextFromArray(String[] array, String target) {
 		for(int i = 0; i < array.length; i++) {
-			if (array[i] == target) {
+			if (array[i].equals(target)) {
 				array[i] = null;
+				System.out.println("Target removed");
+				return null;
+			} else if (array[array.length - 1] == null) {
+				System.out.println("Target not found.");
+				return null;
 			}
 		}
 		return null; //Alterar aqui, para remover no vetor de texto recebido (array) o valor de texto recebido (target)
