@@ -111,16 +111,15 @@ public class ArrayStarter {
 	//método para adicionar String
 	private static String[] addTextToArray(String[] array, String target) {
 		for(int i = 0; i < array.length; i++) {
+			System.out.println("For ok" + i);
 			if(array[i] == null) {
 				array[i] = target;
+				System.out.println("Adicionado com Sucesso");
 				return null;
-			} else{
-				System.out.println("No more space.");
-				return null;
-			}
+			} 
 		}
-		
-		return null; //Alterar aqui, para adicionar no vetor de texto recebido (array) o valor de texto recebido (target)
+		System.out.println("No more space.");
+		return null;
 	}
 	
 	//método para mostrar menu
